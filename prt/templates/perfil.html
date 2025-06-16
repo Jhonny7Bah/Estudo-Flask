@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+<body>
+    <!-- como pode ver, quando eu colocar o valor da variável na url, vai aparecer no html.-->
+    <h1>PEI, {{usuario}}</h1>
+    <!---->
+    <!--para fazer um link que irá direcionar para algum lugar externo, basta colocar a tag 'a'-->
+    <a href="http://google.com">aoba</a> <!--o href significa referência e é lá que você vai colocar o link com o http-->
+    
+    <!--Se eu quiser direcionar para um interno, ou seja, uma rota no meu site, basta eu fazer sem o http-->
+    <a href="/">tela inicial</a> <!--no href eu coloco o decorator da minha rota. Nesse caso, ele vai direcionar para a homepage.-->
+
+    <!--Aqui eu mudo para uma subpasta do meu site através do url_for-->
+    <a href="{{url_for('homepage')}}"> Voltar </a>
+
+
+
+</body>
+</html>
