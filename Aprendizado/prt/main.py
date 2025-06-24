@@ -20,13 +20,17 @@ def perfil(usuario):
     #logo, para fazer uso do valor da variável, basta colocar {{nome_da_variavel}} no próprio html
     return render_template('perfil.html', usuario=usuario)  
 
-@app.route('/rota_usuario')
+@app.route('/rota_usuario/<usuario>')
 def Perfil_Usuario(rota_usuario):
     from flask import url_for
     #para direcionar o usuário para uma subpasta do site, foi visto que pode ser feito através do endereço da rota, correto?
     # No entanto, caso o endereço acabe mudando, o código quebra. O endereço pode mudar ao decorrer do tempo, mas a função, não.
     # o url_for vai fazer com que seja possível reconhecer uma função python como um endereço de rota
     # e lá no html (na tag a, nesse caso) basta colocar {{url_for('nome_da_funcao')}}
-    return render_template('perfil', rota_usuario, rota_usuario)
+    return render_template('perfil', rota_usuario=rota_usuario)
+
+@app.route('/inicio/noticias')
+def noticias():
+    return render_template('noticia.html')
 
 app.run()        

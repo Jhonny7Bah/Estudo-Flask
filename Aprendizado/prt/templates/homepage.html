@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    {% block titulo %}
+    <title>Documento</title>
+    {% endblock titulo %}
+
+<!--
+
+    caso eu queira fazer uso de um html parecido, basta eu abrir os arquivos com {%block <nome>} e fechar com {%endblock <nome>} para modificar.
+--> 
+</head>
+{% block body %}
+<body>
+    <h1>Olá mundo!</h1>
+    <p>Agora este site está rodando normalmente</p>
+</body>
+{% endblock body %}
+</html>
